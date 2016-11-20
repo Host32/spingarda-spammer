@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Hello Facebook</title>
+</head>
+<body>
+
+<form method="POST" th:action="@{/}" th:object="${botParams}">
+    <div>
+        <label>Pagina:</label>
+        <input name="page" type="text"/>
+    </div>
+    <div>
+        <label>Tempo de espera entre cada comentario (milisegundos, recomendavel acima de 10000):</label>
+        <input name="delay" type="number"/>
+    </div>
+    <div>
+        <label>Quantidade de posts a comentar:</label>
+        <input name="postsAmount" type="number"/>
+    </div>
+    <div>
+        <label>Quantidade de comentarios por post:</label>
+        <input name="commentsAmount" type="number"/>
+    </div>
+    <div>
+        <button type="submit">Iniciar</button>
+    </div>
+</form>
+<a href="/log">Log</a>
+</body>
+</html>
